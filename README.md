@@ -27,7 +27,7 @@ Each tutorial is a self-contained marimo notebook that **explains the math, lets
 
 ```bash
 # Clone
-git clone https://github.com/<your-username>/chaos-canvas.git
+git clone https://github.com/VinodAnbalagan/chaos-canvas.git
 cd chaos-canvas
 
 # Install everything (uv reads pyproject.toml + uv.lock automatically)
