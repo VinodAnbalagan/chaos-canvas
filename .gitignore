@@ -1,0 +1,36 @@
+# uv
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Marimo
+__marimo__/
+
+# Outputs (uncomment if you don't want to track them)
+# gallery/
+
+# Testing
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# Jupyter (in case)
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
