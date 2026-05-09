@@ -1,36 +1,55 @@
-# uv
-.venv/
+# ─── Python bytecode and build artifacts ──────────────────────────
+# These are auto-generated; never useful in git.
 __pycache__/
 *.py[cod]
 *$py.class
-.python-version
-
-# Build
-build/
-dist/
 *.egg-info/
+.eggs/
+dist/
+build/
 
-# IDE
+# ─── Virtual environments ─────────────────────────────────────────
+# Multi-GB of installed packages, reproducible from pyproject.toml + uv.lock.
+.venv/
+venv/
+env/
+
+# ─── Note: we DO commit .python-version and uv.lock ───────────────
+# Together they make `uv sync` reproduce the exact environment.
+
+# ─── IDE / editor files ───────────────────────────────────────────
+# Personal preferences, shouldn't be imposed on contributors.
 .vscode/
 .idea/
 *.swp
+*.swo
+
+# ─── OS files ─────────────────────────────────────────────────────
 .DS_Store
+Thumbs.db
 
-# Marimo
-__marimo__/
-
-# Outputs (uncomment if you don't want to track them)
-# gallery/
-
-# Testing
+# ─── Tool caches ──────────────────────────────────────────────────
+# Regenerable on next run; bloat the repo if committed.
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 htmlcov/
 .coverage
 
-# Jupyter (in case)
-.ipynb_checkpoints/
+# ─── Marimo internals ─────────────────────────────────────────────
+__marimo__/
 
-# OS
-Thumbs.db
+# ─── Project-specific generated content ───────────────────────────
+# Gallery renders are regenerable from the notebooks themselves.
+# We use .gitkeep to preserve the empty directory while ignoring contents.
+gallery/*.png
+gallery/*.mp4
+gallery/*.gif
+!gallery/.gitkeep
+
+# ─── WASM exports ARE committed ───────────────────────────────────
+# We deploy gallery_web/ to GitHub Pages, so it must be in git.
+# (gallery_web/ is intentionally not ignored.)
+
+# ─── Numba JIT caches ─────────────────────────────────────────────
+.numba_cache/
