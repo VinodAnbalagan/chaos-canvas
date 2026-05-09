@@ -78,14 +78,14 @@ Tutorials build on each other. The order is chosen so each piece teaches a math 
 ---
 
 ## 🧱 Project structurechaos-canvas/
-
+```
 ├── src/chaos_canvas/ # Reusable library (chaos game, transforms, render, kaleidoscope)
 ├── notebooks/ # marimo tutorials (start here!)
 ├── gallery/ # Saved renders (PNGs, MP4s)
 ├── gallery_web/ # WASM exports for GitHub Pages
 ├── docs/ # Math notes & references
 └── tests/ # Library tests
-
+```
 ---
 
 ## 🧠 Math philosophy
